@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>index19</title>
+</head>
+
+<body>
+  <script>
+    let isCorrectA = true, isCorrectB = true;
+    let a = prompt('Введите переменную a', '');
+    if (a.replace(/\s/g, '').length === 0 || isNaN(a))
+    isCorrectA = false;
+    let b = prompt('Введите переменную b', '');
+    if (b.replace(/\s/g, '').length === 0 || isNaN(b))
+    isCorrectB = false;
+    if (isCorrectA && isCorrectB) {
+      if (a < 0 && b > 0 || a > 0 && b < 0)
+        alert('Число или выражение под знаком корня должно быть неотрицательным!');
+      else {
+        let answer = (Math.sqrt(a * b) == 4) ? 'Равно' : (Math.sqrt(a * b) < 4) ? 'Мало' : 'Много';
+        alert(answer);
+      }
+    }
+    else {
+      alert('Одно из значений не число или неверный ввод!');
+    }
+  </script>
+</body>
+
+</html>

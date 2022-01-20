@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Операторы ветвлений и JavaScript</title>
+</head>
+
+<body>
+  <Script>
+    function isInteger(num) {
+      return (num ^ 0) === num;
+    }
+    let year = prompt('В каком году у Вас в группе начал вести занятия Виталий Валентинович?', '');
+    if (year.replace(/\s/g, '').length === 0 || isNaN(year)) {
+      alert('Нужно писать число!');
+    }
+    else if (isInteger(Number(year)) == false) {
+      alert('Такого года быть не может');
+    }
+    else if (year <= 2021) {
+      alert('Да не может быть! Это слишком рано..');
+    }
+    else if (year > 2022) {
+      alert('Да вы что! Как-то поздновато..')
+    }
+    else if (year == '2022') {
+      alert('Вы знаток! Да, точно в этом году!')
+    }
+    else {
+      alert('Вы ввели неверные данные, попробуйте снова');
+    }
+  </Script>
+</body>
+
+</html>

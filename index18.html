@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> Оператор ? и иего использование </title>
+</head>
+<body>
+  <script>
+    let a = prompt('Введите имя пользовтеля:', 'имя пользователя');
+    let res = (a.toUpperCase() == 'ВАДИМ') ? 'Привет Вадим, мы ужасно рады видеть Вас на Вашем сайте!!!':
+    (a.toUpperCase() =='ВИТАЛИЙ ВАЛЕНТИНОВИЧ') ?'Здравствуйте Виталий Валентинович! Приветствуем Вас на нашем корпоротивном портале!!!':
+    (a == '' || ' ') ? 'Нет логина' : 'Вы не авторизированы на нашем сайте, зайдите на страницу регистрации';
+    alert(res);
+  </script>
+  
+</body>
+</html>

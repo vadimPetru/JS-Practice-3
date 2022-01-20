@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>21</title>
+</head>
+
+<body>
+  <script>
+    function Pythagoras(A, B, C) {
+      return (Number(A) * Number(A) + Number(B) * Number(B)) == Number(C) * Number(C);
+    }
+
+    let isCorrectA = true, isCorrectB = true, isCorrectC = true;
+    let a = prompt('Введите переменную a', '');
+    if (a.replace(/\s/g, '').length === 0 || isNaN(a))
+    isCorrectA = false;
+      else if (Number(a) <= 0)
+      isCorrectA = false;
+    let b = prompt('Введите переменную b', '');
+    if (b.replace(/\s/g, '').length === 0 || isNaN(b))
+    isCorrectB = false;
+      else if (Number(b) <= 0)
+      isCorrectB = false;
+    let c = prompt('Введите переменную c', '');
+    if (c.replace(/\s/g, '').length === 0 || isNaN(c))
+      isCorrectC = false;
+    else if (Number(c) <= 0)
+      isCorrectC = false;
+    if (isCorrectA && isCorrectB && isCorrectC) {
+      let answer = Pythagoras(a, b, c) ? 'Ура: угадали длины сторон треугольника' : 'Надо учить теорему';
+      alert(answer);
+    }
+    else {
+      alert('Неверный ввод данных: сторона треугольника не может быть отрицательной и естественно это должно быть число');
+    }
+  </script>
+</body>
+
+</html>
