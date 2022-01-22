@@ -8,20 +8,23 @@
 </head>
 <body>
   <script>
-     function isNumber(value) {
-        if (value.replace(/\s/g, '').length === 0 || isNaN(value))
-          return true;
-        else
-          return false;
+     
+   function compare(a, b) {
+      if (isNaN(a) == false && isNaN(b) == false) {
+        result = (Number(a) + Number(a) == Number(b)) ? 'значения равны' : 'значения не равны';
       }
-      let a = prompt('Введите переменную a', '');
-      let b = prompt('Введите переменную b', '');
-      if ((isNumber(a) || isNumber(b) || (isNumber(a) && isNumber(b))))
-        alert('Переменные должны содержать числа');
       else {
-        result = (Number(a)+ Number(a) == Number(b)) ? 'значения равны' : 'значения не равны';
-            alert(result);
-          }
+        result = (a + a == b) ? 'значения равны' : 'значения не равны';
+      }
+       alert(result);
+    }
+    let a = prompt('Введите переменную a', '');
+    let b = prompt('Введите переменную b', '');
+    if ((a.trim() == '' ||  b.trim() == '') || (a.trim() == '') && (b.trim() == ''))
+    alert('Введите все значения');
+      else {
+      compare(a, b);
+    }
   </script>
 </body>
 </html>
