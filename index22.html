@@ -1,30 +1,32 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>jsPractice4</title>
+  <title>22</title>
 </head>
+
 <body>
   <script>
-     
-   function compare(a, b) {
-      if (isNaN(a) == false && isNaN(b) == false) {
-        result = (Number(a) + Number(a) == Number(b)) ? 'значения равны' : 'значения не равны';
-      }
-      else {
-        result = (a + a == b) ? 'значения равны' : 'значения не равны';
-      }
-       alert(result);
-    }
     let a = prompt('Введите переменную a', '');
     let b = prompt('Введите переменную b', '');
-    if ((a.trim() == '' ||  b.trim() == '') || (a.trim() == '') && (b.trim() == ''))
-    alert('Введите все значения');
-      else {
-      compare(a, b);
+    var lengthA = a.length;
+    var lengthB = b.length;
+    if ((a == '' || b == '') || (a == '') && (b == ''))
+    result = 'Введите все значения';
+    else if (isNaN(a) == false && isNaN(b) == false) {
+      if (a.trim() == '' || b.trim() == '')
+        result = (lengthA + lengthA === lengthB) ? 'значения равны' : 'значения не равны';
+      else
+        result = (Number(a) + Number(a) == Number(b)) ? 'значения равны' : 'значения не равны';
     }
+    else
+      result = (a + a == b) ? 'значения равны' : 'значения не равны';
+
+    alert(result);
   </script>
 </body>
+
 </html>
